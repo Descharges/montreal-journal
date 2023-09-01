@@ -1,4 +1,4 @@
-/* ook intro anilmation*/
+/* book intro anilmation*/
 @keyframes bookslide{
     from{
         transform: translateX(100vh);
@@ -12,7 +12,7 @@
 body {
     font-family: 'Patrick Hand', cursive;
     height: 100vh;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
@@ -32,9 +32,10 @@ p {
 #book {
     perspective: 1000px;
     padding: 0px;
-    width: min(100%, 1400px);
+    height: 80vh;
     aspect-ratio: 16/9;
     padding: 10px;
+    margin: 0px;
     position: relative;
     z-index: 0;
     animation: bookslide 1.5s;
