@@ -1,12 +1,19 @@
 function flipPage(page){
-    
+
     for (const elem of page.parentNode.children){
-        elem.classList.remove('priority');
-        elem.classList.remove('maxpriority');
+        if (elem == page){
+            elem.classList.add('maxpriority');
+            elem.classList.remove('disabled');
+        }else if (elem == page.previousElementSibling || elem == page.nextElementSibling){
+            elem.classList.remove('maxpriority');
+            elem.classList.add('priority');
+            elem.classList.remove('disabled');
+        }else{
+            elem.classList.remove('priority');
+            elem.classList.remove('maxpriority');
+            elem.classList.add('disabled');
+        }
     };
-    page.previousElementSibling ? page.previousElementSibling.classList.add('priority') : {};
-    page.nextElementSibling ? page.nextElementSibling.classList.add('priority') : {};
-    page.classList.add("maxpriority");
 
     if (!page.classList.contains('flip')){
         page.classList.add('flip');

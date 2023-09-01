@@ -53,6 +53,7 @@ p {
     transition: 1s;
     transform: rotateY(-10deg);
     z-index: 0;
+    pointer-events:painted;
 }
 .front, .back {
     position: absolute;
@@ -110,6 +111,9 @@ p {
 }
 .maxpriority {
     z-index: 99;
+}
+.disabled{
+    pointer-events: none;
 }
 
 .next {
