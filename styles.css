@@ -1,0 +1,151 @@
+/* ook intro anilmation*/
+@keyframes bookslide{
+    from{
+        transform: translateX(100vh);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+/*page setup*/
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    margin: 0;
+    overflow: hidden;
+    background: rgb(97,60,0);
+    background: radial-gradient(circle, rgba(97,60,0,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+p {
+    font-family: 'Patrick Hand', cursive;
+    font-size:larger;
+    margin: 10px;
+    
+}
+
+/**/
+#book {
+    perspective: 1000px;
+    padding: 0px;
+    width: min(100%, 1200px);
+    aspect-ratio: 16/9;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+    animation: bookslide 1.5s;
+}
+
+/*book page*/
+.page {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    height: 90%;
+    width: 35%;
+    transform-style: preserve-3d;
+    transform-origin: center left;
+    transition: 1s;
+    transform: rotateY(-10deg);
+    z-index: 0;
+}
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/page.jpg");
+    transition: 1s;
+    display: block;
+    padding: 10px;
+    overflow-y: auto;
+}
+.back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    filter: brightness(50%);
+}
+
+/*Book flipping animation*/
+.flip {
+    transform: rotateY(-170deg);
+}
+.flip .front {
+    filter: brightness(50%);
+}
+.flip .back {
+    filter: brightness(100%);
+}
+
+/*Covers styling*/
+.cover, .backcover {
+    top: 3%;
+    height: 94%;
+    width: 36%;
+}
+.cover .front{
+    background-image: url("./assets/cover.jpg");
+    background-size: cover;
+}
+.cover .back{
+    background-image: url("./assets/cover_back.jpg");
+    background-size: cover;
+}
+.backcover .front{
+    background-image: url("./assets/cover.jpg");
+    background-size: cover;
+}
+.backcover .back{
+    background-image: url("./assets/cover_back.jpg");
+    background-size: cover;
+}
+
+/*Makes the book pages appear in order*/
+.priority {
+    z-index: 10;
+}
+.maxpriority {
+    z-index: 99;
+}
+
+.next {
+    position: absolute;
+    top : 100%;
+    left: 100%;
+}
+
+/* styling for cover specifically*/
+#titlepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    font-family: 'Borel', cursive;
+}
+#titlepage h1{
+    font-size: 60pt;
+    text-align: center;
+    line-height: 60pt;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #00000080 #ffffff00;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #00000080;
+  border-radius: 10px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Journal de bord</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Patrick+Hand&display=swap');
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="book">
+        <div class="page backcover" onclick="flipPage(this);">
+            <div class="front">
+            </div>
+            <div class="back">
+            </div>
+        </div>
+        <div class="page 5 6" onclick="flipPage(this);">
+            <div class="front">
+                <h1>5</h1>
+            </div>
+            <div class="back">
+                <h1>6</h1>
+            </div>
+        </div>
+        <div class="page 3 4" onclick="flipPage(this);">
+            <div class="front">
+                <h1></h1>
+            </div>
+            <div class="back">
+                <h1>4</h1>
+            </div>
+        </div>
+        <div class="page 1 2"  onclick="flipPage(this);">
+            <div class="front">
+                <p>Salut :D</p>
+                <p>
+                    Moi, c'est Paul ! J'ai 21 ans, Je viens de Lyon, et suis étudiant 
+                    ingénieur informatique à l'UTBM (dans la ✨ fabuleuse ✨ ville de Belfort).
+                </p>
+                <div style="display: flex;">
+                    <img src="assets/moa.png" alt="Moi en mode poisson" style="height: 180px; border: solid 10px white;"/>
+                    <p style="margin-top: 0px;"> 
+                        Je suis obligé de réaliser une partie de mes études à l'étranger.
+                        J'ai donc choisis de partir à Montréal 🇨🇦 pour réaliser un double diplôme en génie logiciel à l'ÉTS (ce qui me
+                        permet d'être diplomé d'un master québécois en plus d'un diplôme d'ingé Français, ce qui est plutôt nice)
+                    </p>
+                </div>
+                <p>
+                    Ducoup, pour garder un souvenir des péripéties qui auront lieu pendant ce voyage d'un an, j'ai décidé de réaliser un
+                    petit carnet avec tout plein de petits articles et de photos :D ! Mais comme je suis un bip-boupeur jusqu'au bout, j'ai décidé
+                    de le faire sous forme de site internet, parceque je sais que j'aurais la flemme de l'écrire sinon (et puis ca m'entraîne,
+                    vous imaginez pas à quel point c'était relou à faire l'effet livre). Et puis, quitte à faire un site internet, autant le mettre
+                    sur internet, histoire qu'on puisse suivre mes aventures de par le monde 👀.
+                </p>
+            </div>
+            <div class="back">
+                <h1>2</h1>
+            </div>
+        </div>
+        <div class="page cover"  onclick="flipPage(this);">
+            <div class="front" id="titlepage">
+                <h1>Carnet de voyage</h1>
+                <h2>Paul Caillier</h2>
+                <p>Cliquez sur les pages pour les tourner -></p>
+            </div>
+            <div class="back">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
