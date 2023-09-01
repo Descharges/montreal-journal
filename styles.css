@@ -10,6 +10,7 @@
 
 /*page setup*/
 body {
+    font-family: 'Patrick Hand', cursive;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,9 +23,8 @@ body {
 }
 
 p {
-    font-family: 'Patrick Hand', cursive;
-    font-size:larger;
-    margin: 10px;
+    font-size: 17pt;
+    margin: 5px;
     
 }
 
@@ -32,7 +32,7 @@ p {
 #book {
     perspective: 1000px;
     padding: 0px;
-    width: min(100%, 1200px);
+    width: min(100%, 1400px);
     aspect-ratio: 16/9;
     padding: 10px;
     position: relative;
