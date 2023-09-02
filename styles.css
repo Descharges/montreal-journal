@@ -23,7 +23,7 @@ body {
     background: radial-gradient(circle, rgba(97,60,0,1) 0%, rgba(0,0,0,1) 100%);
 }
 
-p {
+p, li{
     font-size: 16pt;
     margin: 5px;
     
